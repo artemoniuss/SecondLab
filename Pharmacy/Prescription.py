@@ -12,10 +12,4 @@ class prescription:
     def add_medicine(self, medicine):
         self.medicines.append(medicine)
     def delete_medicine(self, index):
-        j = 1
-        new_medicines = []
-        for i in self.medicines:
-            if not j == index:
-                new_medicines.append(i)
-            j += 1
-        self.medicines = new_medicines
+        self.medicines.pop(index)
